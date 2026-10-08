@@ -8,8 +8,7 @@
     "node": ">=24"
   },
   "scripts": {
-    "start": "node src/server.ts",
-    "compare": "node test/compare-live.ts"
+    "start": "node src/server.ts"
   },
   "dependencies": {
     "mongodb": "^6.12.0",

@@ -1,6 +1,6 @@
 # Img2color
 
-本项目使用 Node.js 实现，图片处理基于 Sharp（libvips），兼容性好且适合 Serverless 环境
+本项目基于[安知鱼](https://github.com/anzhiyu-c)的[img2color-go](https://github.com/anzhiyu-c/img2color-go)项目修改，使用 Node.js 实现，图片处理基于 Sharp（libvips），兼容性好且适合 Serverless 环境
 
 支持vercel与服务器部署
 
@@ -35,8 +35,6 @@ PORT=3000 node src/server.ts
 > 提示：本项目不再附带 `.env`，环境变量由部署平台（Vercel）或进程环境变量提供。未配置 `ALLOWED_REFERERS` 时不限制来源；一旦配置了白名单，未命中的请求会返回 403。
 
 ## 使用
-
-例如：https://img2color-go.vercel.app/api?img=https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/banner/神里.webp
 
 部署后只需要 域名/api 访问
 
