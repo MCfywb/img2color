@@ -1,0 +1,19 @@
+{
+  "name": "img2color",
+  "version": "1.0.0",
+  "private": true,
+  "description": "GET /api?img=<url> -> {\"RGB\":\"#xxxxxx\"} 图片主色（平均色）提取服务（Node.js 版本，替换原 Go 实现）",
+  "type": "module",
+  "engines": {
+    "node": ">=26"
+  },
+  "scripts": {
+    "start": "node src/server.ts",
+    "compare": "node test/compare-live.ts"
+  },
+  "dependencies": {
+    "mongodb": "^6.12.0",
+    "redis": "^5.4.1",
+    "sharp": "^0.34.0"
+  }
+}
