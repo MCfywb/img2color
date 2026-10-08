@@ -1,8 +1,10 @@
 # Img2color
 
-本项目使用go作为基础，具有较高的性能
+本项目使用 Node.js 实现，图片处理基于 Sharp（libvips），兼容性好且适合 Serverless 环境
 
 支持vercel与服务器部署
+
+运行环境要求：Node.js 24.x+
 
 ## vercel部署
 
@@ -18,17 +20,19 @@
 
 ## 服务器部署
 
-需要go环境
+需要 Node.js 24.x+ 环境
 
 1. 安装依赖
 ```bash
-go mod tidy
+npm install
 ```
 2. 运行
-```
-go run /api/img2color.go
+```bash
+PORT=3000 node src/server.ts
 ```
 此处不赘述守护进程。
+
+> 提示：`ALLOWED_REFERERS` 一旦配置了白名单，未命中来源的请求会返回 403（本地调试可用 `ALLOWED_REFERERS="" PORT=3000 node src/server.ts` 覆盖）。
 
 ## 使用
 
