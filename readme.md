@@ -32,7 +32,7 @@ PORT=3000 node src/server.ts
 ```
 此处不赘述守护进程。
 
-> 提示：`ALLOWED_REFERERS` 一旦配置了白名单，未命中来源的请求会返回 403（本地调试可用 `ALLOWED_REFERERS="" PORT=3000 node src/server.ts` 覆盖）。
+> 提示：本项目不再附带 `.env`，环境变量由部署平台（Vercel）或进程环境变量提供。未配置 `ALLOWED_REFERERS` 时不限制来源；一旦配置了白名单，未命中的请求会返回 403。
 
 ## 使用
 
@@ -42,7 +42,7 @@ PORT=3000 node src/server.ts
 
 必填参数img: url
 
-.env文件配置说明
+环境变量配置说明（Vercel 在 Project Settings → Environment Variables 配置）
 
 
 | 配置项                  | 说明                                 |
